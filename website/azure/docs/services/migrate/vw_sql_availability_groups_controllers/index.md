@@ -1,0 +1,93 @@
+--- 
+title: vw_sql_availability_groups_controllers
+hide_title: false
+hide_table_of_contents: false
+keywords:
+  - vw_sql_availability_groups_controllers
+  - migrate
+  - azure
+  - infrastructure-as-code
+  - configuration-as-data
+  - cloud inventory
+description: Query, deploy and manage azure resources using SQL
+custom_edit_url: null
+image: /img/stackql-azure-provider-featured-image.png
+---
+
+import CopyableCode from '@site/src/components/CopyableCode/CopyableCode';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Creates, updates, deletes, gets or lists a <code>vw_sql_availability_groups_controllers</code> resource.
+
+## Overview
+<table><tbody>
+<tr><td><b>Name</b></td><td><code>vw_sql_availability_groups_controllers</code></td></tr>
+<tr><td><b>Type</b></td><td>View</td></tr>
+<tr><td><b>Id</b></td><td><CopyableCode code="azure.migrate.vw_sql_availability_groups_controllers" /></td></tr>
+</tbody></table>
+
+## Fields
+
+See the SQL Definition (view DDL) for fields returned by this view.
+
+## SQL Definition
+
+<Tabs
+defaultValue="Sqlite3"
+values={[
+{ label: 'Sqlite3', value: 'Sqlite3' },
+{ label: 'Postgres', value: 'Postgres' }
+]}
+>
+<TabItem value="Sqlite3">
+
+```sql
+SELECT
+JSON_EXTRACT(properties, '$.availabilityGroupName') as "availability_group_name",
+JSON_EXTRACT(properties, '$.availabilityGroupType') as "availability_group_type",
+JSON_EXTRACT(properties, '$.isMultiSubNet') as "is_multi_sub_net",
+JSON_EXTRACT(properties, '$.clusterName') as "cluster_name",
+JSON_EXTRACT(properties, '$.availabilityReplicas') as "availability_replicas",
+JSON_EXTRACT(properties, '$.parentReplicaOverviewList') as "parent_replica_overview_list",
+JSON_EXTRACT(properties, '$.isPartOfDistributedAvailabilityGroup') as "is_part_of_distributed_availability_group",
+JSON_EXTRACT(properties, '$.isDeleted') as "is_deleted",
+JSON_EXTRACT(properties, '$.createdTimestamp') as "created_timestamp",
+JSON_EXTRACT(properties, '$.updatedTimestamp') as "updated_timestamp",
+JSON_EXTRACT(properties, '$.provisioningState') as "provisioning_state",
+subscriptionId,
+resourceGroupName,
+siteName,
+sqlSiteName,
+sqlAvailabilityGroupName
+FROM azure.migrate.sql_availability_groups_controllers
+WHERE subscriptionId = 'replace-me' AND resourceGroupName = 'replace-me' AND siteName = 'replace-me' AND sqlSiteName = 'replace-me';
+```
+
+</TabItem>
+<TabItem value="Postgres">
+
+```sql
+SELECT
+json_extract_path_text(properties, '$.availabilityGroupName') as "availability_group_name",
+json_extract_path_text(properties, '$.availabilityGroupType') as "availability_group_type",
+json_extract_path_text(properties, '$.isMultiSubNet') as "is_multi_sub_net",
+json_extract_path_text(properties, '$.clusterName') as "cluster_name",
+json_extract_path_text(properties, '$.availabilityReplicas') as "availability_replicas",
+json_extract_path_text(properties, '$.parentReplicaOverviewList') as "parent_replica_overview_list",
+json_extract_path_text(properties, '$.isPartOfDistributedAvailabilityGroup') as "is_part_of_distributed_availability_group",
+json_extract_path_text(properties, '$.isDeleted') as "is_deleted",
+json_extract_path_text(properties, '$.createdTimestamp') as "created_timestamp",
+json_extract_path_text(properties, '$.updatedTimestamp') as "updated_timestamp",
+json_extract_path_text(properties, '$.provisioningState') as "provisioning_state",
+subscriptionId,
+resourceGroupName,
+siteName,
+sqlSiteName,
+sqlAvailabilityGroupName
+FROM azure.migrate.sql_availability_groups_controllers
+WHERE subscriptionId = 'replace-me' AND resourceGroupName = 'replace-me' AND siteName = 'replace-me' AND sqlSiteName = 'replace-me';
+```
+
+</TabItem>
+</Tabs>

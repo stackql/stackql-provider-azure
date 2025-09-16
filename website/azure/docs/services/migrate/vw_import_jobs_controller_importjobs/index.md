@@ -1,0 +1,95 @@
+--- 
+title: vw_import_jobs_controller_importjobs
+hide_title: false
+hide_table_of_contents: false
+keywords:
+  - vw_import_jobs_controller_importjobs
+  - migrate
+  - azure
+  - infrastructure-as-code
+  - configuration-as-data
+  - cloud inventory
+description: Query, deploy and manage azure resources using SQL
+custom_edit_url: null
+image: /img/stackql-azure-provider-featured-image.png
+---
+
+import CopyableCode from '@site/src/components/CopyableCode/CopyableCode';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Creates, updates, deletes, gets or lists a <code>vw_import_jobs_controller_importjobs</code> resource.
+
+## Overview
+<table><tbody>
+<tr><td><b>Name</b></td><td><code>vw_import_jobs_controller_importjobs</code></td></tr>
+<tr><td><b>Type</b></td><td>View</td></tr>
+<tr><td><b>Id</b></td><td><CopyableCode code="azure.migrate.vw_import_jobs_controller_importjobs" /></td></tr>
+</tbody></table>
+
+## Fields
+
+See the SQL Definition (view DDL) for fields returned by this view.
+
+## SQL Definition
+
+<Tabs
+defaultValue="Sqlite3"
+values={[
+{ label: 'Sqlite3', value: 'Sqlite3' },
+{ label: 'Postgres', value: 'Postgres' }
+]}
+>
+<TabItem value="Sqlite3">
+
+```sql
+SELECT
+id as id,
+name as name,
+type as type,
+status as status,
+startTime as start_time,
+endTime as end_time,
+displayName as display_name,
+JSON_EXTRACT(properties, '$.blobName') as "blob_name",
+JSON_EXTRACT(properties, '$.blobSasUri') as "blob_sas_uri",
+JSON_EXTRACT(properties, '$.jobResult') as "job_result",
+JSON_EXTRACT(properties, '$.numberOfMachinesImported') as "number_of_machines_imported",
+JSON_EXTRACT(properties, '$.blobCreationTimeStamp') as "blob_creation_time_stamp",
+JSON_EXTRACT(properties, '$.errorSummary') as "error_summary",
+subscriptionId,
+resourceGroupName,
+siteName,
+jobName
+FROM azure.migrate.import_jobs_controller_importjobs
+WHERE subscriptionId = 'replace-me' AND resourceGroupName = 'replace-me' AND siteName = 'replace-me';
+```
+
+</TabItem>
+<TabItem value="Postgres">
+
+```sql
+SELECT
+id as id,
+name as name,
+type as type,
+status as status,
+startTime as start_time,
+endTime as end_time,
+displayName as display_name,
+json_extract_path_text(properties, '$.blobName') as "blob_name",
+json_extract_path_text(properties, '$.blobSasUri') as "blob_sas_uri",
+json_extract_path_text(properties, '$.jobResult') as "job_result",
+json_extract_path_text(properties, '$.numberOfMachinesImported') as "number_of_machines_imported",
+json_extract_path_text(properties, '$.blobCreationTimeStamp') as "blob_creation_time_stamp",
+json_extract_path_text(properties, '$.errorSummary') as "error_summary",
+subscriptionId,
+resourceGroupName,
+siteName,
+jobName
+FROM azure.migrate.import_jobs_controller_importjobs
+WHERE subscriptionId = 'replace-me' AND resourceGroupName = 'replace-me' AND siteName = 'replace-me';
+```
+
+</TabItem>
+</Tabs>

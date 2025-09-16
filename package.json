@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "generate-docs": "./bin/generate-docs.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,6 +17,7 @@
     "@autorest/core": "^3.10.1",
     "@azure-tools/datastore": "^4.7.0",
     "@stackql/pgwire-lite": "^1.0.1",
+    "@stackql/provider-utils": "^0.4.9",
     "arg": "^5.0.2",
     "autorest": "^3.7.1",
     "command-line-usage": "^6.1.3",

@@ -1,0 +1,54 @@
+---
+title: event_hubs
+hide_title: false
+hide_table_of_contents: false
+keywords:
+  - event_hubs
+  - azure
+  - stackql
+  - infrastructure-as-code
+  - configuration-as-data
+  - cloud inventory
+description: Query, deploy and manage azure resources using SQL
+custom_edit_url: null
+image: /img/stackql-azure-provider-featured-image.png
+---
+
+event_hubs service documentation.
+
+:::info[Service Summary]
+
+total resources: __23__  
+
+:::
+
+## Resources
+<div class="row">
+<div class="providerDocColumn">
+<a href="/services/event_hubs/application_group_application_groups/">application_group_application_groups</a><br />
+<a href="/services/event_hubs/application_groups/">application_groups</a><br />
+<a href="/services/event_hubs/authorization_rules/">authorization_rules</a><br />
+<a href="/services/event_hubs/clusters/">clusters</a><br />
+<a href="/services/event_hubs/clusters_available_cluster_regions/">clusters_available_cluster_regions</a><br />
+<a href="/services/event_hubs/clusters_namespaces/">clusters_namespaces</a><br />
+<a href="/services/event_hubs/configurations/">configurations</a><br />
+<a href="/services/event_hubs/consumer_groups/">consumer_groups</a><br />
+<a href="/services/event_hubs/disaster_recovery_configs/">disaster_recovery_configs</a><br />
+<a href="/services/event_hubs/disaster_recovery_configs_authorization_rules/">disaster_recovery_configs_authorization_rules</a><br />
+<a href="/services/event_hubs/disaster_recovery_configs_keys/">disaster_recovery_configs_keys</a><br />
+<a href="/services/event_hubs/event_hubs/">event_hubs</a>
+</div>
+<div class="providerDocColumn">
+<a href="/services/event_hubs/keys/">keys</a><br />
+<a href="/services/event_hubs/namespaces/">namespaces</a><br />
+<a href="/services/event_hubs/namespaces_authorization_rules/">namespaces_authorization_rules</a><br />
+<a href="/services/event_hubs/namespaces_keys/">namespaces_keys</a><br />
+<a href="/services/event_hubs/namespaces_network_rule_sets/">namespaces_network_rule_sets</a><br />
+<a href="/services/event_hubs/network_security_perimeter_configurations/">network_security_perimeter_configurations</a><br />
+<a href="/services/event_hubs/operations/">operations</a><br />
+<a href="/services/event_hubs/private_endpoint_connections/">private_endpoint_connections</a><br />
+<a href="/services/event_hubs/private_link_resources/">private_link_resources</a><br />
+<a href="/services/event_hubs/schema_registries/">schema_registries</a><br />
+<a href="/services/event_hubs/vw_private_endpoint_connections/">vw_private_endpoint_connections</a>
+</div>
+</div>

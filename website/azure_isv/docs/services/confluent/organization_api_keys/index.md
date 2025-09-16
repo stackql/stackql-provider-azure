@@ -1,0 +1,172 @@
+--- 
+title: organization_api_keys
+hide_title: false
+hide_table_of_contents: false
+keywords:
+  - organization_api_keys
+  - confluent
+  - azure_isv
+  - infrastructure-as-code
+  - configuration-as-data
+  - cloud inventory
+description: Query, deploy and manage azure_isv resources using SQL
+custom_edit_url: null
+image: /img/stackql-azure_isv-provider-featured-image.png
+---
+
+import CopyableCode from '@site/src/components/CopyableCode/CopyableCode';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Creates, updates, deletes, gets or lists an <code>organization_api_keys</code> resource.
+
+## Overview
+<table><tbody>
+<tr><td><b>Name</b></td><td><code>organization_api_keys</code></td></tr>
+<tr><td><b>Type</b></td><td>Resource</td></tr>
+<tr><td><b>Id</b></td><td><CopyableCode code="azure_isv.confluent.organization_api_keys" /></td></tr>
+</tbody></table>
+
+## Fields
+
+The following fields are returned by `SELECT` queries:
+
+`SELECT` not supported for this resource, use `SHOW METHODS` to view available operations for the resource.
+
+
+## Methods
+
+The following methods are available for this resource:
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Accessible by</th>
+    <th>Required Params</th>
+    <th>Optional Params</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td><a href="#create"><CopyableCode code="create" /></a></td>
+    <td><CopyableCode code="insert" /></td>
+    <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-organizationName"><code>organizationName</code></a>, <a href="#parameter-environmentId"><code>environmentId</code></a>, <a href="#parameter-clusterId"><code>clusterId</code></a></td>
+    <td></td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+
+## Parameters
+
+Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#methods) section to see which parameters are required or optional for each operation.
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Datatype</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr id="parameter-clusterId">
+    <td><CopyableCode code="clusterId" /></td>
+    <td><code>string</code></td>
+    <td>Confluent kafka or schema registry cluster id</td>
+</tr>
+<tr id="parameter-environmentId">
+    <td><CopyableCode code="environmentId" /></td>
+    <td><code>string</code></td>
+    <td>Confluent environment id</td>
+</tr>
+<tr id="parameter-organizationName">
+    <td><CopyableCode code="organizationName" /></td>
+    <td><code>string</code></td>
+    <td>Organization resource name</td>
+</tr>
+<tr id="parameter-resourceGroupName">
+    <td><CopyableCode code="resourceGroupName" /></td>
+    <td><code>string</code></td>
+    <td>The name of the resource group. The name is case insensitive.</td>
+</tr>
+<tr id="parameter-subscriptionId">
+    <td><CopyableCode code="subscriptionId" /></td>
+    <td><code>string (uuid)</code></td>
+    <td>The ID of the target subscription. The value must be an UUID.</td>
+</tr>
+</tbody>
+</table>
+
+## `INSERT` examples
+
+<Tabs
+    defaultValue="create"
+    values={[
+        { label: 'create', value: 'create' },
+        { label: 'Manifest', value: 'manifest' }
+    ]}
+>
+<TabItem value="create">
+
+No description available.
+
+```sql
+INSERT INTO azure_isv.confluent.organization_api_keys (
+data__name,
+data__description,
+subscriptionId,
+resourceGroupName,
+organizationName,
+environmentId,
+clusterId
+)
+SELECT 
+'{{ name }}',
+'{{ description }}',
+'{{ subscriptionId }}',
+'{{ resourceGroupName }}',
+'{{ organizationName }}',
+'{{ environmentId }}',
+'{{ clusterId }}'
+RETURNING
+id,
+kind,
+properties
+;
+```
+</TabItem>
+<TabItem value="manifest">
+
+```yaml
+# Description fields are for documentation purposes
+- name: organization_api_keys
+  props:
+    - name: subscriptionId
+      value: string (uuid)
+      description: Required parameter for the organization_api_keys resource.
+    - name: resourceGroupName
+      value: string
+      description: Required parameter for the organization_api_keys resource.
+    - name: organizationName
+      value: string
+      description: Required parameter for the organization_api_keys resource.
+    - name: environmentId
+      value: string
+      description: Required parameter for the organization_api_keys resource.
+    - name: clusterId
+      value: string
+      description: Required parameter for the organization_api_keys resource.
+    - name: name
+      value: string
+      description: |
+        Name of the API Key
+    - name: description
+      value: string
+      description: |
+        Description of the API Key
+```
+</TabItem>
+</Tabs>

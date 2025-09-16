@@ -1,0 +1,165 @@
+--- 
+title: private_link_resources_supported
+hide_title: false
+hide_table_of_contents: false
+keywords:
+  - private_link_resources_supported
+  - search
+  - azure
+  - infrastructure-as-code
+  - configuration-as-data
+  - cloud inventory
+description: Query, deploy and manage azure resources using SQL
+custom_edit_url: null
+image: /img/stackql-azure-provider-featured-image.png
+---
+
+import CopyableCode from '@site/src/components/CopyableCode/CopyableCode';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Creates, updates, deletes, gets or lists a <code>private_link_resources_supported</code> resource.
+
+## Overview
+<table><tbody>
+<tr><td><b>Name</b></td><td><code>private_link_resources_supported</code></td></tr>
+<tr><td><b>Type</b></td><td>Resource</td></tr>
+<tr><td><b>Id</b></td><td><CopyableCode code="azure.search.private_link_resources_supported" /></td></tr>
+</tbody></table>
+
+## Fields
+
+The following fields are returned by `SELECT` queries:
+
+<Tabs
+    defaultValue="list"
+    values={[
+        { label: 'list', value: 'list' }
+    ]}
+>
+<TabItem value="list">
+
+The operation succeeded. The response contains the list of all supported private link resource types for the given service.
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Datatype</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td><CopyableCode code="id" /></td>
+    <td><code>string</code></td>
+    <td>Fully qualified resource ID for the resource. Ex - /subscriptions/&#123;subscriptionId&#125;/resourceGroups/&#123;resourceGroupName&#125;/providers/&#123;resourceProviderNamespace&#125;/&#123;resourceType&#125;/&#123;resourceName&#125;</td>
+</tr>
+<tr>
+    <td><CopyableCode code="name" /></td>
+    <td><code>string</code></td>
+    <td>The name of the resource</td>
+</tr>
+<tr>
+    <td><CopyableCode code="properties" /></td>
+    <td><code>object</code></td>
+    <td>Describes the properties of a supported private link resource for the Azure AI Search service.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="type" /></td>
+    <td><code>string</code></td>
+    <td>The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"</td>
+</tr>
+</tbody>
+</table>
+</TabItem>
+</Tabs>
+
+## Methods
+
+The following methods are available for this resource:
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Accessible by</th>
+    <th>Required Params</th>
+    <th>Optional Params</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td><a href="#list"><CopyableCode code="list" /></a></td>
+    <td><CopyableCode code="select" /></td>
+    <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-searchServiceName"><code>searchServiceName</code></a></td>
+    <td><a href="#parameter-x-ms-client-request-id"><code>x-ms-client-request-id</code></a></td>
+    <td>Gets a list of all supported private link resource types for the given service.</td>
+</tr>
+</tbody>
+</table>
+
+## Parameters
+
+Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#methods) section to see which parameters are required or optional for each operation.
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Datatype</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr id="parameter-resourceGroupName">
+    <td><CopyableCode code="resourceGroupName" /></td>
+    <td><code>string</code></td>
+    <td>The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.</td>
+</tr>
+<tr id="parameter-searchServiceName">
+    <td><CopyableCode code="searchServiceName" /></td>
+    <td><code>string</code></td>
+    <td>The name of the Azure AI Search service associated with the specified resource group.</td>
+</tr>
+<tr id="parameter-subscriptionId">
+    <td><CopyableCode code="subscriptionId" /></td>
+    <td><code>string</code></td>
+    <td>The unique identifier for a Microsoft Azure subscription. You can obtain this value from the Azure Resource Manager API or the portal.</td>
+</tr>
+<tr id="parameter-x-ms-client-request-id">
+    <td><CopyableCode code="x-ms-client-request-id" /></td>
+    <td><code>string (uuid)</code></td>
+    <td>A client-generated GUID value that identifies this request. If specified, this will be included in response information as a way to track the request.</td>
+</tr>
+</tbody>
+</table>
+
+## `SELECT` examples
+
+<Tabs
+    defaultValue="list"
+    values={[
+        { label: 'list', value: 'list' }
+    ]}
+>
+<TabItem value="list">
+
+Gets a list of all supported private link resource types for the given service.
+
+```sql
+SELECT
+id,
+name,
+properties,
+type
+FROM azure.search.private_link_resources_supported
+WHERE subscriptionId = '{{ subscriptionId }}' -- required
+AND resourceGroupName = '{{ resourceGroupName }}' -- required
+AND searchServiceName = '{{ searchServiceName }}' -- required
+AND x-ms-client-request-id = '{{ x-ms-client-request-id }}'
+;
+```
+</TabItem>
+</Tabs>

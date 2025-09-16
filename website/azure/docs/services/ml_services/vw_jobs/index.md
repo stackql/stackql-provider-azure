@@ -1,0 +1,95 @@
+--- 
+title: vw_jobs
+hide_title: false
+hide_table_of_contents: false
+keywords:
+  - vw_jobs
+  - ml_services
+  - azure
+  - infrastructure-as-code
+  - configuration-as-data
+  - cloud inventory
+description: Query, deploy and manage azure resources using SQL
+custom_edit_url: null
+image: /img/stackql-azure-provider-featured-image.png
+---
+
+import CopyableCode from '@site/src/components/CopyableCode/CopyableCode';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Creates, updates, deletes, gets or lists a <code>vw_jobs</code> resource.
+
+## Overview
+<table><tbody>
+<tr><td><b>Name</b></td><td><code>vw_jobs</code></td></tr>
+<tr><td><b>Type</b></td><td>View</td></tr>
+<tr><td><b>Id</b></td><td><CopyableCode code="azure.ml_services.vw_jobs" /></td></tr>
+</tbody></table>
+
+## Fields
+
+See the SQL Definition (view DDL) for fields returned by this view.
+
+## SQL Definition
+
+<Tabs
+defaultValue="Sqlite3"
+values={[
+{ label: 'Sqlite3', value: 'Sqlite3' },
+{ label: 'Postgres', value: 'Postgres' }
+]}
+>
+<TabItem value="Sqlite3">
+
+```sql
+SELECT
+JSON_EXTRACT(properties, '$.description') as "description",
+JSON_EXTRACT(properties, '$.properties') as "properties",
+JSON_EXTRACT(properties, '$.tags') as "tags",
+JSON_EXTRACT(properties, '$.componentId') as "component_id",
+JSON_EXTRACT(properties, '$.computeId') as "compute_id",
+JSON_EXTRACT(properties, '$.displayName') as "display_name",
+JSON_EXTRACT(properties, '$.experimentName') as "experiment_name",
+JSON_EXTRACT(properties, '$.identity') as "identity",
+JSON_EXTRACT(properties, '$.isArchived') as "is_archived",
+JSON_EXTRACT(properties, '$.jobType') as "job_type",
+JSON_EXTRACT(properties, '$.notificationSetting') as "notification_setting",
+JSON_EXTRACT(properties, '$.services') as "services",
+JSON_EXTRACT(properties, '$.status') as "status",
+subscriptionId,
+resourceGroupName,
+workspaceName,
+id
+FROM azure.ml_services.jobs
+WHERE subscriptionId = 'replace-me' AND resourceGroupName = 'replace-me' AND workspaceName = 'replace-me';
+```
+
+</TabItem>
+<TabItem value="Postgres">
+
+```sql
+SELECT
+json_extract_path_text(properties, '$.description') as "description",
+json_extract_path_text(properties, '$.properties') as "properties",
+json_extract_path_text(properties, '$.tags') as "tags",
+json_extract_path_text(properties, '$.componentId') as "component_id",
+json_extract_path_text(properties, '$.computeId') as "compute_id",
+json_extract_path_text(properties, '$.displayName') as "display_name",
+json_extract_path_text(properties, '$.experimentName') as "experiment_name",
+json_extract_path_text(properties, '$.identity') as "identity",
+json_extract_path_text(properties, '$.isArchived') as "is_archived",
+json_extract_path_text(properties, '$.jobType') as "job_type",
+json_extract_path_text(properties, '$.notificationSetting') as "notification_setting",
+json_extract_path_text(properties, '$.services') as "services",
+json_extract_path_text(properties, '$.status') as "status",
+subscriptionId,
+resourceGroupName,
+workspaceName,
+id
+FROM azure.ml_services.jobs
+WHERE subscriptionId = 'replace-me' AND resourceGroupName = 'replace-me' AND workspaceName = 'replace-me';
+```
+
+</TabItem>
+</Tabs>

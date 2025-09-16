@@ -1,0 +1,395 @@
+--- 
+title: partner_topic_event_subscriptions
+hide_title: false
+hide_table_of_contents: false
+keywords:
+  - partner_topic_event_subscriptions
+  - event_grid
+  - azure
+  - infrastructure-as-code
+  - configuration-as-data
+  - cloud inventory
+description: Query, deploy and manage azure resources using SQL
+custom_edit_url: null
+image: /img/stackql-azure-provider-featured-image.png
+---
+
+import CopyableCode from '@site/src/components/CopyableCode/CopyableCode';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Creates, updates, deletes, gets or lists a <code>partner_topic_event_subscriptions</code> resource.
+
+## Overview
+<table><tbody>
+<tr><td><b>Name</b></td><td><code>partner_topic_event_subscriptions</code></td></tr>
+<tr><td><b>Type</b></td><td>Resource</td></tr>
+<tr><td><b>Id</b></td><td><CopyableCode code="azure.event_grid.partner_topic_event_subscriptions" /></td></tr>
+</tbody></table>
+
+## Fields
+
+The following fields are returned by `SELECT` queries:
+
+<Tabs
+    defaultValue="get"
+    values={[
+        { label: 'get', value: 'get' },
+        { label: 'list_by_partner_topic', value: 'list_by_partner_topic' }
+    ]}
+>
+<TabItem value="get">
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Datatype</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td><CopyableCode code="id" /></td>
+    <td><code>string</code></td>
+    <td>Fully qualified identifier of the resource.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="name" /></td>
+    <td><code>string</code></td>
+    <td>Name of the resource.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="properties" /></td>
+    <td><code>object</code></td>
+    <td>Properties of the event subscription.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="systemData" /></td>
+    <td><code>object</code></td>
+    <td>The system metadata relating to Event Subscription resource.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="type" /></td>
+    <td><code>string</code></td>
+    <td>Type of the resource.</td>
+</tr>
+</tbody>
+</table>
+</TabItem>
+<TabItem value="list_by_partner_topic">
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Datatype</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td><CopyableCode code="id" /></td>
+    <td><code>string</code></td>
+    <td>Fully qualified identifier of the resource.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="name" /></td>
+    <td><code>string</code></td>
+    <td>Name of the resource.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="properties" /></td>
+    <td><code>object</code></td>
+    <td>Properties of the event subscription.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="systemData" /></td>
+    <td><code>object</code></td>
+    <td>The system metadata relating to Event Subscription resource.</td>
+</tr>
+<tr>
+    <td><CopyableCode code="type" /></td>
+    <td><code>string</code></td>
+    <td>Type of the resource.</td>
+</tr>
+</tbody>
+</table>
+</TabItem>
+</Tabs>
+
+## Methods
+
+The following methods are available for this resource:
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Accessible by</th>
+    <th>Required Params</th>
+    <th>Optional Params</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+    <td><a href="#get"><CopyableCode code="get" /></a></td>
+    <td><CopyableCode code="select" /></td>
+    <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-partnerTopicName"><code>partnerTopicName</code></a>, <a href="#parameter-eventSubscriptionName"><code>eventSubscriptionName</code></a></td>
+    <td></td>
+    <td>Get properties of an event subscription of a partner topic.</td>
+</tr>
+<tr>
+    <td><a href="#list_by_partner_topic"><CopyableCode code="list_by_partner_topic" /></a></td>
+    <td><CopyableCode code="select" /></td>
+    <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-partnerTopicName"><code>partnerTopicName</code></a></td>
+    <td><a href="#parameter-$filter"><code>$filter</code></a>, <a href="#parameter-$top"><code>$top</code></a></td>
+    <td>List event subscriptions that belong to a specific partner topic.</td>
+</tr>
+<tr>
+    <td><a href="#create_or_update"><CopyableCode code="create_or_update" /></a></td>
+    <td><CopyableCode code="insert" /></td>
+    <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-partnerTopicName"><code>partnerTopicName</code></a>, <a href="#parameter-eventSubscriptionName"><code>eventSubscriptionName</code></a></td>
+    <td></td>
+    <td>Asynchronously creates or updates an event subscription of a partner topic with the specified parameters. Existing event subscriptions will be updated with this API.</td>
+</tr>
+<tr>
+    <td><a href="#update"><CopyableCode code="update" /></a></td>
+    <td><CopyableCode code="update" /></td>
+    <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-partnerTopicName"><code>partnerTopicName</code></a>, <a href="#parameter-eventSubscriptionName"><code>eventSubscriptionName</code></a></td>
+    <td></td>
+    <td>Update an existing event subscription of a partner topic.</td>
+</tr>
+<tr>
+    <td><a href="#delete"><CopyableCode code="delete" /></a></td>
+    <td><CopyableCode code="delete" /></td>
+    <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-partnerTopicName"><code>partnerTopicName</code></a>, <a href="#parameter-eventSubscriptionName"><code>eventSubscriptionName</code></a></td>
+    <td></td>
+    <td>Delete an existing event subscription of a partner topic.</td>
+</tr>
+</tbody>
+</table>
+
+## Parameters
+
+Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#methods) section to see which parameters are required or optional for each operation.
+
+<table>
+<thead>
+    <tr>
+    <th>Name</th>
+    <th>Datatype</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+<tr id="parameter-eventSubscriptionName">
+    <td><CopyableCode code="eventSubscriptionName" /></td>
+    <td><code>string</code></td>
+    <td>Name of the event subscription to be deleted.</td>
+</tr>
+<tr id="parameter-partnerTopicName">
+    <td><CopyableCode code="partnerTopicName" /></td>
+    <td><code>string</code></td>
+    <td>Name of the partner topic.</td>
+</tr>
+<tr id="parameter-resourceGroupName">
+    <td><CopyableCode code="resourceGroupName" /></td>
+    <td><code>string</code></td>
+    <td>The name of the resource group within the user's subscription.</td>
+</tr>
+<tr id="parameter-subscriptionId">
+    <td><CopyableCode code="subscriptionId" /></td>
+    <td><code>string</code></td>
+    <td>Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.</td>
+</tr>
+<tr id="parameter-$filter">
+    <td><CopyableCode code="$filter" /></td>
+    <td><code>string</code></td>
+    <td>The query used to filter the search results using OData syntax. Filtering is permitted on the 'name' property only and with limited number of OData operations. These operations are: the 'contains' function as well as the following logical operations: not, and, or, eq (for equal), and ne (for not equal). No arithmetic operations are supported. The following is a valid filter example: $filter=contains(namE, 'PATTERN') and name ne 'PATTERN-1'. The following is not a valid filter example: $filter=location eq 'westus'.</td>
+</tr>
+<tr id="parameter-$top">
+    <td><CopyableCode code="$top" /></td>
+    <td><code>integer (int32)</code></td>
+    <td>The number of results to return per page for the list operation. Valid range for top parameter is 1 to 100. If not specified, the default number of results to be returned is 20 items per page.</td>
+</tr>
+</tbody>
+</table>
+
+## `SELECT` examples
+
+<Tabs
+    defaultValue="get"
+    values={[
+        { label: 'get', value: 'get' },
+        { label: 'list_by_partner_topic', value: 'list_by_partner_topic' }
+    ]}
+>
+<TabItem value="get">
+
+Get properties of an event subscription of a partner topic.
+
+```sql
+SELECT
+id,
+name,
+properties,
+systemData,
+type
+FROM azure.event_grid.partner_topic_event_subscriptions
+WHERE subscriptionId = '{{ subscriptionId }}' -- required
+AND resourceGroupName = '{{ resourceGroupName }}' -- required
+AND partnerTopicName = '{{ partnerTopicName }}' -- required
+AND eventSubscriptionName = '{{ eventSubscriptionName }}' -- required
+;
+```
+</TabItem>
+<TabItem value="list_by_partner_topic">
+
+List event subscriptions that belong to a specific partner topic.
+
+```sql
+SELECT
+id,
+name,
+properties,
+systemData,
+type
+FROM azure.event_grid.partner_topic_event_subscriptions
+WHERE subscriptionId = '{{ subscriptionId }}' -- required
+AND resourceGroupName = '{{ resourceGroupName }}' -- required
+AND partnerTopicName = '{{ partnerTopicName }}' -- required
+AND $filter = '{{ $filter }}'
+AND $top = '{{ $top }}'
+;
+```
+</TabItem>
+</Tabs>
+
+
+## `INSERT` examples
+
+<Tabs
+    defaultValue="create_or_update"
+    values={[
+        { label: 'create_or_update', value: 'create_or_update' },
+        { label: 'Manifest', value: 'manifest' }
+    ]}
+>
+<TabItem value="create_or_update">
+
+Asynchronously creates or updates an event subscription of a partner topic with the specified parameters. Existing event subscriptions will be updated with this API.
+
+```sql
+INSERT INTO azure.event_grid.partner_topic_event_subscriptions (
+data__properties,
+subscriptionId,
+resourceGroupName,
+partnerTopicName,
+eventSubscriptionName
+)
+SELECT 
+'{{ properties }}',
+'{{ subscriptionId }}',
+'{{ resourceGroupName }}',
+'{{ partnerTopicName }}',
+'{{ eventSubscriptionName }}'
+RETURNING
+id,
+name,
+properties,
+systemData,
+type
+;
+```
+</TabItem>
+<TabItem value="manifest">
+
+```yaml
+# Description fields are for documentation purposes
+- name: partner_topic_event_subscriptions
+  props:
+    - name: subscriptionId
+      value: string
+      description: Required parameter for the partner_topic_event_subscriptions resource.
+    - name: resourceGroupName
+      value: string
+      description: Required parameter for the partner_topic_event_subscriptions resource.
+    - name: partnerTopicName
+      value: string
+      description: Required parameter for the partner_topic_event_subscriptions resource.
+    - name: eventSubscriptionName
+      value: string
+      description: Required parameter for the partner_topic_event_subscriptions resource.
+    - name: properties
+      value: object
+      description: |
+        Properties of the event subscription.
+```
+</TabItem>
+</Tabs>
+
+
+## `UPDATE` examples
+
+<Tabs
+    defaultValue="update"
+    values={[
+        { label: 'update', value: 'update' }
+    ]}
+>
+<TabItem value="update">
+
+Update an existing event subscription of a partner topic.
+
+```sql
+UPDATE azure.event_grid.partner_topic_event_subscriptions
+SET 
+data__destination = '{{ destination }}',
+data__deliveryWithResourceIdentity = '{{ deliveryWithResourceIdentity }}',
+data__filter = '{{ filter }}',
+data__labels = '{{ labels }}',
+data__expirationTimeUtc = '{{ expirationTimeUtc }}',
+data__eventDeliverySchema = '{{ eventDeliverySchema }}',
+data__retryPolicy = '{{ retryPolicy }}',
+data__deadLetterDestination = '{{ deadLetterDestination }}',
+data__deadLetterWithResourceIdentity = '{{ deadLetterWithResourceIdentity }}'
+WHERE 
+subscriptionId = '{{ subscriptionId }}' --required
+AND resourceGroupName = '{{ resourceGroupName }}' --required
+AND partnerTopicName = '{{ partnerTopicName }}' --required
+AND eventSubscriptionName = '{{ eventSubscriptionName }}' --required
+RETURNING
+id,
+name,
+properties,
+systemData,
+type;
+```
+</TabItem>
+</Tabs>
+
+
+## `DELETE` examples
+
+<Tabs
+    defaultValue="delete"
+    values={[
+        { label: 'delete', value: 'delete' }
+    ]}
+>
+<TabItem value="delete">
+
+Delete an existing event subscription of a partner topic.
+
+```sql
+DELETE FROM azure.event_grid.partner_topic_event_subscriptions
+WHERE subscriptionId = '{{ subscriptionId }}' --required
+AND resourceGroupName = '{{ resourceGroupName }}' --required
+AND partnerTopicName = '{{ partnerTopicName }}' --required
+AND eventSubscriptionName = '{{ eventSubscriptionName }}' --required
+;
+```
+</TabItem>
+</Tabs>

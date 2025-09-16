@@ -1,0 +1,68 @@
+components:
+  x-stackQL-resources:
+    virtual_machine_instance_view:
+      id: azure.compute.virtual_machine_instance_view
+      name: virtual_machine_instance_view
+      title: virtual_machine_instance_view
+      methods:
+        instance_view:
+          operation:
+            $ref: '#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Compute~1virtualMachines~1{vmName}~1instanceView?api-version=2024-07-01/get'
+            operationId: VirtualMachines_InstanceView
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+            schemaRef: VirtualMachineInstanceView
+      sqlVerbs:
+        select:
+          - $ref: '#/components/x-stackQL-resources/virtual_machine_instance_view/methods/instance_view'
+        insert: []
+        update: []
+        replace: []
+        delete: []
+    vw_instance_statuses:
+      id: azure.compute.vw_instance_statuses
+      name: vw_instance_statuses
+      config:
+        views:
+          select:
+            predicate: sqlDialect == "sqlite3"
+            ddl: |-
+              SELECT vmName, 
+              split_part(json_extract(json_each.value, '$.code'), '/', 1) as type, 
+              split_part(json_extract(json_each.value, '$.code'), '/', 2) as status,
+              json_extract(json_each.value, '$.displayStatus') as display_status,
+              json_extract(json_each.value, '$.level') as level,
+              json_extract(json_each.value, '$.time') as time,
+              subscriptionId,
+              resourceGroupName
+              FROM azure.compute.virtual_machine_instance_view, json_each(statuses) 
+              WHERE subscriptionId = 'replace-me' and resourceGroupName = 'replace-me' and vmName = 'replace-me';
+            fallback:
+              predicate: sqlDialect == "postgres"
+              ddl: |-
+                SELECT vmName, 
+                split_part(json_extract(json_each.value, '$.code'), '/', 1) as type, 
+                split_part(json_extract(json_each.value, '$.code'), '/', 2) as status,
+                json_extract(json_each.value, '$.displayStatus') as display_status,
+                json_extract(json_each.value, '$.level') as level,
+                json_extract(json_each.value, '$.time') as time,
+                subscriptionId,
+                resourceGroupName                
+                FROM azure.compute.virtual_machine_instance_view, json_each(statuses) 
+                WHERE subscriptionId = 'replace-me' and resourceGroupName = 'replace-me' and vmName = 'replace-me';
+
+# EXEC /*+ SHOWRESULTS */ azure.compute.virtual_machines.instance_view
+# @subscriptionId = '631d1c6d-2a65-43e7-93c2-688bfe4e1468',
+# @resourceGroupName = 'STACKQL-TEST',
+# @vmName = 'stackql-test';
+
+# select
+# vmName,
+# status
+# from
+# azure.compute.vw_instance_statuses
+# WHERE subscriptionId = '631d1c6d-2a65-43e7-93c2-688bfe4e1468'
+# and resourceGroupName = 'STACKQL-TEST'
+# and vmName = 'stackql-test'
+# and type = 'PowerState';                

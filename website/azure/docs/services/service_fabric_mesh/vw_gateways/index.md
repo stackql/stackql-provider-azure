@@ -1,0 +1,89 @@
+--- 
+title: vw_gateways
+hide_title: false
+hide_table_of_contents: false
+keywords:
+  - vw_gateways
+  - service_fabric_mesh
+  - azure
+  - infrastructure-as-code
+  - configuration-as-data
+  - cloud inventory
+description: Query, deploy and manage azure resources using SQL
+custom_edit_url: null
+image: /img/stackql-azure-provider-featured-image.png
+---
+
+import CopyableCode from '@site/src/components/CopyableCode/CopyableCode';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Creates, updates, deletes, gets or lists a <code>vw_gateways</code> resource.
+
+## Overview
+<table><tbody>
+<tr><td><b>Name</b></td><td><code>vw_gateways</code></td></tr>
+<tr><td><b>Type</b></td><td>View</td></tr>
+<tr><td><b>Id</b></td><td><CopyableCode code="azure.service_fabric_mesh.vw_gateways" /></td></tr>
+</tbody></table>
+
+## Fields
+
+See the SQL Definition (view DDL) for fields returned by this view.
+
+## SQL Definition
+
+<Tabs
+defaultValue="Sqlite3"
+values={[
+{ label: 'Sqlite3', value: 'Sqlite3' },
+{ label: 'Postgres', value: 'Postgres' }
+]}
+>
+<TabItem value="Sqlite3">
+
+```sql
+SELECT
+location as location,
+tags as tags,
+JSON_EXTRACT(properties, '$.provisioningState') as "provisioning_state",
+JSON_EXTRACT(properties, '$.description') as "description",
+JSON_EXTRACT(properties, '$.sourceNetwork') as "source_network",
+JSON_EXTRACT(properties, '$.destinationNetwork') as "destination_network",
+JSON_EXTRACT(properties, '$.tcp') as "tcp",
+JSON_EXTRACT(properties, '$.http') as "http",
+JSON_EXTRACT(properties, '$.status') as "status",
+JSON_EXTRACT(properties, '$.statusDetails') as "status_details",
+JSON_EXTRACT(properties, '$.ipAddress') as "ip_address",
+subscriptionId,
+resourceGroupName,
+gatewayResourceName
+FROM azure.service_fabric_mesh.gateways
+WHERE subscriptionId = 'replace-me';
+```
+
+</TabItem>
+<TabItem value="Postgres">
+
+```sql
+SELECT
+location as location,
+tags as tags,
+json_extract_path_text(properties, '$.provisioningState') as "provisioning_state",
+json_extract_path_text(properties, '$.description') as "description",
+json_extract_path_text(properties, '$.sourceNetwork') as "source_network",
+json_extract_path_text(properties, '$.destinationNetwork') as "destination_network",
+json_extract_path_text(properties, '$.tcp') as "tcp",
+json_extract_path_text(properties, '$.http') as "http",
+json_extract_path_text(properties, '$.status') as "status",
+json_extract_path_text(properties, '$.statusDetails') as "status_details",
+json_extract_path_text(properties, '$.ipAddress') as "ip_address",
+subscriptionId,
+resourceGroupName,
+gatewayResourceName
+FROM azure.service_fabric_mesh.gateways
+WHERE subscriptionId = 'replace-me';
+```
+
+</TabItem>
+</Tabs>

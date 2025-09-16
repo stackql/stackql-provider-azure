@@ -155,9 +155,53 @@ true
 # Document
 
 ```bash
-sh start-stackql-server.sh
-bin/stackql-azure-openapi doc azure
-bin/stackql-azure-openapi doc azure_isv
-bin/stackql-azure-openapi doc azure_stack
-bin/stackql-azure-openapi doc azure_extras
+sh provider-dev/scripts/fix-broken-links.sh
+
+# azure_stack
+npm run generate-docs -- \
+  --provider-name azure_stack \
+  --provider-dir ./openapi/src/azure_stack/v00.00.00000 \
+  --output-dir ./website/azure_stack \
+  --provider-data-dir ./provider-dev/docgen/azure_stack
+
+cd website/azure_stack
+yarn build
+yarn start
+cd ../..
+
+# azure_isv
+npm run generate-docs -- \
+  --provider-name azure_isv \
+  --provider-dir ./openapi/src/azure_isv/v00.00.00000 \
+  --output-dir ./website/azure_isv \
+  --provider-data-dir ./provider-dev/docgen/azure_isv
+
+cd website/azure_isv
+yarn build
+yarn start
+cd ../..
+
+# azure_extras
+npm run generate-docs -- \
+  --provider-name azure_extras \
+  --provider-dir ./openapi/src/azure_extras/v00.00.00000 \
+  --output-dir ./website/azure_extras \
+  --provider-data-dir ./provider-dev/docgen/azure_extras
+
+cd website/azure_extras
+yarn build
+yarn start
+cd ../..
+
+# azure
+npm run generate-docs -- \
+  --provider-name azure \
+  --provider-dir ./openapi/src/azure/v00.00.00000 \
+  --output-dir ./website/azure \
+  --provider-data-dir ./provider-dev/docgen/azure
+
+cd website/azure
+export NODE_OPTIONS="--max-old-space-size=24576" && yarn build
+yarn start
+cd ../..
 ```
