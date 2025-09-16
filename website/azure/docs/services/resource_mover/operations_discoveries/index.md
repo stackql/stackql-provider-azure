@@ -51,12 +51,16 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="name" /></td>
     <td><code>string</code></td>
-    <td>Gets or sets Name of the API. The name of the operation being performed on this particular object. It should match the action name that appears in RBAC / the event service. Examples of operations include: * Microsoft.Compute/virtualMachine/capture/action * Microsoft.Compute/virtualMachine/restart/action * Microsoft.Compute/virtualMachine/write * Microsoft.Compute/virtualMachine/read * Microsoft.Compute/virtualMachine/delete Each action should include, in order: (1) Resource Provider Namespace (2) Type hierarchy for which the action applies (e.g. server/databases for a SQL Azure database) (3) Read, Write, Action or Delete indicating which type applies. If it is a PUT/PATCH on a collection or named value, Write should be used. If it is a GET, Read should be used. If it is a DELETE, Delete should be used. If it is a POST, Action should be used. As a note: all resource providers would need to include the "&#123;Resource Provider Namespace&#125;/register/action" operation in their response. This API is used to register for their service, and should include details about the operation (e.g. a localized name for the resource provider + any special considerations like PII release).</td>
+ <td>Gets or sets Name of the API.<br /> The name of the operation being performed on this particular object. It should<br /> match the action name that appears in RBAC / the event service.<br /> Examples of operations include:<br /> * Microsoft.Compute/virtualMachine/capture/action<br /> * Microsoft.Compute/virtualMachine/restart/action<br /> * Microsoft.Compute/virtualMachine/write<br /> * Microsoft.Compute/virtualMachine/read<br /> * Microsoft.Compute/virtualMachine/delete<br /> Each action should include, in order:<br /> (1) Resource Provider Namespace<br /> (2) Type hierarchy for which the action applies (e.g. server/databases for a SQL Azure database)<br /> (3) Read, Write, Action or Delete indicating which type applies. If it is a PUT/PATCH on a collection or named value, Write should be used.If it is a GET, Read should be used. If it is a DELETE, Delete should be used. If it is a POST, Action should be used.<br /> As a note: all resource providers would need to include the "&#123;Resource Provider<br />Namespace&#125;/register/action" operation in their response.<br />This API is used to register for their service, and should include details about the<br />operation (e.g. a localized name for the resource provider + any specialconsiderations like PII release).</td>
 </tr>
 <tr>
     <td><CopyableCode code="display" /></td>
     <td><code>object</code></td>
-    <td>Contains the localized display information for this particular operation / action. These value will be used by several clients for (1) custom role definitions for RBAC; (2) complex query filters for the event service; and (3) audit history / records for management operations.</td>
+    <td>Contains the localized display information for this particular operation / action. These
+ value will be used by several clients for
+ (1) custom role definitions for RBAC;
+ (2) complex query filters for the event service; and
+ (3) audit history / records for management operations.</td>
 </tr>
 <tr>
     <td><CopyableCode code="isDataAction" /></td>
@@ -66,7 +70,10 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="origin" /></td>
     <td><code>string</code></td>
-    <td>Gets or sets Origin. The intended executor of the operation; governs the display of the operation in the RBAC UX and the audit logs UX. Default value is "user,system".</td>
+    <td>Gets or sets Origin.
+ The intended executor of the operation; governs the display of the operation in the
+ RBAC UX and the audit logs UX.
+ Default value is "user,system".</td>
 </tr>
 <tr>
     <td><CopyableCode code="properties" /></td>

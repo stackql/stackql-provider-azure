@@ -160,7 +160,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 <tr id="parameter-resourceName">
     <td><CopyableCode code="resourceName" /></td>
     <td><code>string</code></td>
-    <td>Resource name for a given resource provider. For example: - SKU name for Microsoft.Compute - SKU or TotalLowPriorityCores for Microsoft.MachineLearningServices  For Microsoft.Network PublicIPAddresses.</td>
+    <td>Resource name for a given resource provider. For example:<br /> - SKU name for Microsoft.Compute<br /> - SKU or<br />TotalLowPriorityCores for Microsoft.MachineLearningServices<br />  For Microsoft.Network PublicIPAddresses.</td>
 </tr>
 <tr id="parameter-scope">
     <td><CopyableCode code="scope" /></td>
