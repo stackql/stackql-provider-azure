@@ -187,7 +187,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 <tr id="parameter-$top">
     <td><CopyableCode code="$top" /></td>
     <td><code>integer (int32)</code></td>
-    <td>Top count of results, top count cannot be greater than the page size.                               If topCount &gt; page size, results with be default page size count will be returned</td>
+    <td>Top count of results, top count cannot be greater than the page size.<br />                               If topCount &gt; page size, results with be default page size count will be returned</td>
 </tr>
 <tr id="parameter-listViewType">
     <td><CopyableCode code="listViewType" /></td>

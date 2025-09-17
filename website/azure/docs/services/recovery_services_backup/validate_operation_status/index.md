@@ -108,7 +108,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-operationId"><code>operationId</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Fetches the status of a triggered validate operation. The status can be in progress, completed<br />or failed. You can refer to the OperationStatus enum for all the possible states of the operation.<br />If operation has completed, this method returns the list of errors obtained while validating the operation.</td>
+    <td>Fetches the status of a triggered validate operation. The status can be in progress, completed<br />or failed. You can refer to the OperationStatus enum for all the possible states of the operation.<br />If operation has completed, this method returns the list of errors obtained while validating the operation.</td>
 </tr>
 </tbody>
 </table>
@@ -164,7 +164,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="get">
 
-Fetches the status of a triggered validate operation. The status can be in progress, completed<br />or failed. You can refer to the OperationStatus enum for all the possible states of the operation.<br />If operation has completed, this method returns the list of errors obtained while validating the operation.
+Fetches the status of a triggered validate operation. The status can be in progress, completed<br />or failed. You can refer to the OperationStatus enum for all the possible states of the operation.<br />If operation has completed, this method returns the list of errors obtained while validating the operation.
 
 ```sql
 SELECT

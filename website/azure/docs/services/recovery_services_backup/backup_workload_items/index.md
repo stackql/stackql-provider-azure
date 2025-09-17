@@ -93,7 +93,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a>, <a href="#parameter-$filter"><code>$filter</code></a>, <a href="#parameter-$skipToken"><code>$skipToken</code></a></td>
-    <td>Provides a pageable list of workload item of a specific container according to the query filter and the pagination<br />parameters.</td>
+    <td>Provides a pageable list of workload item of a specific container according to the query filter and the pagination<br />parameters.</td>
 </tr>
 </tbody>
 </table>
@@ -164,7 +164,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="list">
 
-Provides a pageable list of workload item of a specific container according to the query filter and the pagination<br />parameters.
+Provides a pageable list of workload item of a specific container according to the query filter and the pagination<br />parameters.
 
 ```sql
 SELECT

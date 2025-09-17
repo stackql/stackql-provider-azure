@@ -169,7 +169,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 <tr id="parameter-$filter">
     <td><CopyableCode code="$filter" /></td>
     <td><code>string</code></td>
-    <td>| Field       | Supported operators    | Supported functions               | |-------------|------------------------|-----------------------------------|  |name | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith| |description | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith| |isCurrent | eq, ne |    | </td>
+    <td>| Field       | Supported operators    | Supported functions               | |-------------|------------------------|-----------------------------------| <br /> |name | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith| |description | ge, le, eq, ne, gt, lt | substringof, contains, startswith, endswith| |isCurrent | eq, ne |    | </td>
 </tr>
 <tr id="parameter-$skip">
     <td><CopyableCode code="$skip" /></td>

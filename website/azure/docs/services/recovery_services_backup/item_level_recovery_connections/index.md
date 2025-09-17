@@ -54,14 +54,14 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a>, <a href="#parameter-protectedItemName"><code>protectedItemName</code></a>, <a href="#parameter-recoveryPointId"><code>recoveryPointId</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Provisions a script which invokes an iSCSI connection to the backup data. Executing this script opens a file<br />explorer displaying all the recoverable files and folders. This is an asynchronous operation. To know the status of<br />provisioning, call GetProtectedItemOperationResult API.</td>
+    <td>Provisions a script which invokes an iSCSI connection to the backup data. Executing this script opens a file<br />explorer displaying all the recoverable files and folders. This is an asynchronous operation. To know the status of<br />provisioning, call GetProtectedItemOperationResult API.</td>
 </tr>
 <tr>
     <td><a href="#revoke"><CopyableCode code="revoke" /></a></td>
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a>, <a href="#parameter-protectedItemName"><code>protectedItemName</code></a>, <a href="#parameter-recoveryPointId"><code>recoveryPointId</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Revokes an iSCSI connection which can be used to download a script. Executing this script opens a file explorer<br />displaying all recoverable files and folders. This is an asynchronous operation.</td>
+    <td>Revokes an iSCSI connection which can be used to download a script. Executing this script opens a file explorer<br />displaying all recoverable files and folders. This is an asynchronous operation.</td>
 </tr>
 </tbody>
 </table>
@@ -97,7 +97,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 <tr id="parameter-recoveryPointId">
     <td><CopyableCode code="recoveryPointId" /></td>
     <td><code>string</code></td>
-    <td>Recovery point ID which represents backed up data. iSCSI connection will be revoked for this backed up data.</td>
+    <td>Recovery point ID which represents backed up data. iSCSI connection will be revoked for<br /> this backed up data.</td>
 </tr>
 <tr id="parameter-resourceGroupName">
     <td><CopyableCode code="resourceGroupName" /></td>
@@ -133,7 +133,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="provision">
 
-Provisions a script which invokes an iSCSI connection to the backup data. Executing this script opens a file<br />explorer displaying all the recoverable files and folders. This is an asynchronous operation. To know the status of<br />provisioning, call GetProtectedItemOperationResult API.
+Provisions a script which invokes an iSCSI connection to the backup data. Executing this script opens a file<br />explorer displaying all the recoverable files and folders. This is an asynchronous operation. To know the status of<br />provisioning, call GetProtectedItemOperationResult API.
 
 ```sql
 EXEC azure.recovery_services_backup.item_level_recovery_connections.provision 
@@ -154,7 +154,7 @@ EXEC azure.recovery_services_backup.item_level_recovery_connections.provision
 </TabItem>
 <TabItem value="revoke">
 
-Revokes an iSCSI connection which can be used to download a script. Executing this script opens a file explorer<br />displaying all recoverable files and folders. This is an asynchronous operation.
+Revokes an iSCSI connection which can be used to download a script. Executing this script opens a file explorer<br />displaying all recoverable files and folders. This is an asynchronous operation.
 
 ```sql
 EXEC azure.recovery_services_backup.item_level_recovery_connections.revoke 

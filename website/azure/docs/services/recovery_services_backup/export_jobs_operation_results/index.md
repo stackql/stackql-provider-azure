@@ -88,7 +88,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-operationId"><code>operationId</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Gets the operation result of operation triggered by Export Jobs API. If the operation is successful, then it also<br />contains URL of a Blob and a SAS key to access the same. The blob contains exported jobs in JSON serialized format.</td>
+    <td>Gets the operation result of operation triggered by Export Jobs API. If the operation is successful, then it also<br />contains URL of a Blob and a SAS key to access the same. The blob contains exported jobs in JSON serialized format.</td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +144,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="get">
 
-Gets the operation result of operation triggered by Export Jobs API. If the operation is successful, then it also<br />contains URL of a Blob and a SAS key to access the same. The blob contains exported jobs in JSON serialized format.
+Gets the operation result of operation triggered by Export Jobs API. If the operation is successful, then it also<br />contains URL of a Blob and a SAS key to access the same. The blob contains exported jobs in JSON serialized format.
 
 ```sql
 SELECT

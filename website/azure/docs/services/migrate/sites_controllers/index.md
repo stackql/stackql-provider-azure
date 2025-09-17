@@ -225,21 +225,21 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-siteName"><code>siteName</code></a></td>
     <td></td>
-    <td>Method to generate report containing<br />            machine and the deep discovery of the application installed in the machine.</td>
+    <td>Method to generate report containing<br />            machine and the deep discovery of the application installed in the machine.</td>
 </tr>
 <tr>
     <td><a href="#export_machine_errors"><CopyableCode code="export_machine_errors" /></a></td>
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-siteName"><code>siteName</code></a></td>
     <td></td>
-    <td>Method to generate report containing <br />            machine and the errors encountered during guest discovery of the machine.</td>
+    <td>Method to generate report containing <br />            machine and the errors encountered during guest discovery of the machine.</td>
 </tr>
 <tr>
     <td><a href="#export_machines"><CopyableCode code="export_machines" /></a></td>
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-siteName"><code>siteName</code></a></td>
     <td></td>
-    <td>Method to generate report containing <br />            machine and the deep discovery of the application installed in the machine.</td>
+    <td>Method to generate report containing <br />            machine and the deep discovery of the application installed in the machine.</td>
 </tr>
 <tr>
     <td><a href="#summary"><CopyableCode code="summary" /></a></td>
@@ -505,7 +505,7 @@ EXEC azure.migrate.sites_controllers.computeusage
 </TabItem>
 <TabItem value="export_applications">
 
-Method to generate report containing<br />            machine and the deep discovery of the application installed in the machine.
+Method to generate report containing<br />            machine and the deep discovery of the application installed in the machine.
 
 ```sql
 EXEC azure.migrate.sites_controllers.export_applications 
@@ -517,7 +517,7 @@ EXEC azure.migrate.sites_controllers.export_applications
 </TabItem>
 <TabItem value="export_machine_errors">
 
-Method to generate report containing <br />            machine and the errors encountered during guest discovery of the machine.
+Method to generate report containing <br />            machine and the errors encountered during guest discovery of the machine.
 
 ```sql
 EXEC azure.migrate.sites_controllers.export_machine_errors 
@@ -533,7 +533,7 @@ EXEC azure.migrate.sites_controllers.export_machine_errors
 </TabItem>
 <TabItem value="export_machines">
 
-Method to generate report containing <br />            machine and the deep discovery of the application installed in the machine.
+Method to generate report containing <br />            machine and the deep discovery of the application installed in the machine.
 
 ```sql
 EXEC azure.migrate.sites_controllers.export_machines 

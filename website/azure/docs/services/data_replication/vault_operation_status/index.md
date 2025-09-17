@@ -71,7 +71,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="status" /></td>
     <td><code>string</code></td>
-    <td>Gets or sets the status of the operation. ARM expects the terminal status to be one of Succeeded/ Failed/ Canceled. All other values imply that the operation is still running.</td>
+    <td>Gets or sets the status of the operation. ARM expects the terminal status to be one of<br /> Succeeded/ Failed/ Canceled. All other values imply that the operation is still running.</td>
 </tr>
 </tbody>
 </table>

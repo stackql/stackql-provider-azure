@@ -246,7 +246,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-backupInstanceName"><code>backupInstanceName</code></a></td>
     <td></td>
-    <td>Sync backup instance again in case of failure<br />This action will retry last failed operation and will bring backup instance to valid state</td>
+    <td>Sync backup instance again in case of failure<br />This action will retry last failed operation and will bring backup instance to valid state</td>
 </tr>
 <tr>
     <td><a href="#validate_for_restore"><CopyableCode code="validate_for_restore" /></a></td>
@@ -646,7 +646,7 @@ EXEC azure.data_protection.backup_instances.suspend_backups
 </TabItem>
 <TabItem value="sync_backup_instance">
 
-Sync backup instance again in case of failure<br />This action will retry last failed operation and will bring backup instance to valid state
+Sync backup instance again in case of failure<br />This action will retry last failed operation and will bring backup instance to valid state
 
 ```sql
 EXEC azure.data_protection.backup_instances.sync_backup_instance 

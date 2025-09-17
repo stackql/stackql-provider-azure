@@ -146,14 +146,14 @@ The following methods are available for this resource:
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-providerId"><code>providerId</code></a>, <a href="#parameter-location"><code>location</code></a>, <a href="#parameter-resourceName"><code>resourceName</code></a></td>
     <td></td>
-    <td>Create or update the quota (service limits) of a resource to the requested value.<br /> Steps:<br />  1. Make the Get request to get the quota information for specific resource.<br />  2. To increase the quota, update the limit field in the response from Get request to new value.<br />  3. Submit the JSON to the quota request API to update the quota.<br />  The Create quota request may be constructed as follows. The PUT operation can be used to update the quota.</td>
+    <td>Create or update the quota (service limits) of a resource to the requested value.<br /> Steps:<br />  1. Make the Get request to get the quota information for specific resource.<br />  2. To increase the quota, update the limit field in the response from Get request to new value.<br />  3. Submit the JSON to the quota request API to update the quota.<br />  The Create quota request may be constructed as follows. The PUT operation can be used to update the quota.</td>
 </tr>
 <tr>
     <td><a href="#update"><CopyableCode code="update" /></a></td>
     <td><CopyableCode code="update" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-providerId"><code>providerId</code></a>, <a href="#parameter-location"><code>location</code></a>, <a href="#parameter-resourceName"><code>resourceName</code></a></td>
     <td></td>
-    <td>Update the quota (service limits) of this resource to the requested value.<br />  • To get the quota information for specific resource, send a GET request.<br />  • To increase the quota, update the limit field from the GET response to a new value.<br />  • To update the quota value, submit the JSON response to the quota request API to update the quota.<br />  • To update the quota. use the PATCH operation.</td>
+    <td>Update the quota (service limits) of this resource to the requested value.<br />  • To get the quota information for specific resource, send a GET request.<br />  • To increase the quota, update the limit field from the GET response to a new value.<br />  • To update the quota value, submit the JSON response to the quota request API to update the quota.<br />  • To update the quota. use the PATCH operation.</td>
 </tr>
 </tbody>
 </table>
@@ -252,7 +252,7 @@ AND location = '{{ location }}' -- required
 >
 <TabItem value="create_or_update">
 
-Create or update the quota (service limits) of a resource to the requested value.<br /> Steps:<br />  1. Make the Get request to get the quota information for specific resource.<br />  2. To increase the quota, update the limit field in the response from Get request to new value.<br />  3. Submit the JSON to the quota request API to update the quota.<br />  The Create quota request may be constructed as follows. The PUT operation can be used to update the quota.
+Create or update the quota (service limits) of a resource to the requested value.<br /> Steps:<br />  1. Make the Get request to get the quota information for specific resource.<br />  2. To increase the quota, update the limit field in the response from Get request to new value.<br />  3. Submit the JSON to the quota request API to update the quota.<br />  The Create quota request may be constructed as follows. The PUT operation can be used to update the quota.
 
 ```sql
 INSERT INTO azure.reservations.quotas (
@@ -313,7 +313,7 @@ type
 >
 <TabItem value="update">
 
-Update the quota (service limits) of this resource to the requested value.<br />  • To get the quota information for specific resource, send a GET request.<br />  • To increase the quota, update the limit field from the GET response to a new value.<br />  • To update the quota value, submit the JSON response to the quota request API to update the quota.<br />  • To update the quota. use the PATCH operation.
+Update the quota (service limits) of this resource to the requested value.<br />  • To get the quota information for specific resource, send a GET request.<br />  • To increase the quota, update the limit field from the GET response to a new value.<br />  • To update the quota value, submit the JSON response to the quota request API to update the quota.<br />  • To update the quota. use the PATCH operation.
 
 ```sql
 UPDATE azure.reservations.quotas

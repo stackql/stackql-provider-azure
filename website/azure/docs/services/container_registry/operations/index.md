@@ -63,7 +63,7 @@ The request was successful; the request was well-formed and received properly.
 <tr>
     <td><CopyableCode code="isDataAction" /></td>
     <td><code>boolean</code></td>
-    <td>This property indicates if the operation is an action or a data action ref: https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions#management-and-data-operations</td>
+    <td>This property indicates if the operation is an action or a data action<br /> ref: https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions#management-and-data-operations</td>
 </tr>
 <tr>
     <td><CopyableCode code="origin" /></td>

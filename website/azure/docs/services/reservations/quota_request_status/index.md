@@ -180,7 +180,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 <tr id="parameter-$filter">
     <td><CopyableCode code="$filter" /></td>
     <td><code>string</code></td>
-    <td>| Field | Supported operators | |---------------------|------------------------| |requestSubmitTime | ge, le, eq, gt, lt |</td>
+    <td>| Field | Supported operators |<br /> |---------------------|------------------------|<br /> |requestSubmitTime | ge, le, eq, gt, lt |</td>
 </tr>
 <tr id="parameter-$skiptoken">
     <td><CopyableCode code="$skiptoken" /></td>

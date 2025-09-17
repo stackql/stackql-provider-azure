@@ -80,7 +80,7 @@ Successfully retrieved the specified database.
 <tr>
     <td><CopyableCode code="sku" /></td>
     <td><code>object</code></td>
-<td>The database SKU.<br />The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:<br /><br />```azurecli<br />az sql db list-editions -l &lt;location&gt; -o table<br />````<br /><br />```powershell<br /> Get-AzSqlServerServiceObjective -Location &lt;location&gt;```` </td>
+    <td>The database SKU.<br /> <br /> The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:<br /> <br /> ```azurecli<br /> az sql db list-editions -l &lt;location&gt; -o table<br /> ````<br /> <br /> ```powershell<br /> Get-AzSqlServerServiceObjective -Location &lt;location&gt;<br /> ````<br /> </td>
 </tr>
 <tr>
     <td><CopyableCode code="tags" /></td>
@@ -131,18 +131,7 @@ Successfully retrieved a list of databases in an elastic pool.
 <tr>
     <td><CopyableCode code="sku" /></td>
     <td><code>object</code></td>
-    <td>The database SKU.
- 
- The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
- 
- ```azurecli
- az sql db list-editions -l <location> -o table
- ````
- 
- ```powershell
- Get-AzSqlServerServiceObjective -Location &lt;location&gt;
- ````
- </td>
+    <td>The database SKU.<br /> <br /> The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:<br /> <br /> ```azurecli<br /> az sql db list-editions -l &lt;location&gt; -o table<br /> ````<br /> <br /> ```powershell<br /> Get-AzSqlServerServiceObjective -Location &lt;location&gt;<br /> ````<br /> </td>
 </tr>
 <tr>
     <td><CopyableCode code="tags" /></td>
@@ -193,18 +182,7 @@ Successfully retrieved the list of databases.
 <tr>
     <td><CopyableCode code="sku" /></td>
     <td><code>object</code></td>
-    <td>The database SKU.
- 
- The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
- 
- ```azurecli
- az sql db list-editions -l <location> -o table
- ````
- 
- ```powershell
- Get-AzSqlServerServiceObjective -Location &lt;location&gt;
- ````
- </td>
+    <td>The database SKU.<br /> <br /> The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:<br /> <br /> ```azurecli<br /> az sql db list-editions -l &lt;location&gt; -o table<br /> ````<br /> <br /> ```powershell<br /> Get-AzSqlServerServiceObjective -Location &lt;location&gt;<br /> ````<br /> </td>
 </tr>
 <tr>
     <td><CopyableCode code="tags" /></td>

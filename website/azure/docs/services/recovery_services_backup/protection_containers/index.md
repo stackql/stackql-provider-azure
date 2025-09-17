@@ -100,14 +100,14 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Registers the container with Recovery Services vault.<br />This is an asynchronous operation. To track the operation status, use location header to call get latest status of<br />the operation.</td>
+    <td>Registers the container with Recovery Services vault.<br />This is an asynchronous operation. To track the operation status, use location header to call get latest status of<br />the operation.</td>
 </tr>
 <tr>
     <td><a href="#unregister"><CopyableCode code="unregister" /></a></td>
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Unregisters the given container from your Recovery Services Vault. This is an asynchronous operation. To determine<br />whether the backend service has finished processing the request, call Get Container Operation Result API.</td>
+    <td>Unregisters the given container from your Recovery Services Vault. This is an asynchronous operation. To determine<br />whether the backend service has finished processing the request, call Get Container Operation Result API.</td>
 </tr>
 <tr>
     <td><a href="#inquire"><CopyableCode code="inquire" /></a></td>
@@ -121,7 +121,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a>, <a href="#parameter-$filter"><code>$filter</code></a></td>
-    <td>Discovers all the containers in the subscription that can be backed up to Recovery Services Vault. This is an<br />asynchronous operation. To know the status of the operation, call GetRefreshOperationResult API.</td>
+    <td>Discovers all the containers in the subscription that can be backed up to Recovery Services Vault. This is an<br />asynchronous operation. To know the status of the operation, call GetRefreshOperationResult API.</td>
 </tr>
 </tbody>
 </table>
@@ -221,7 +221,7 @@ AND api-version = '{{ api-version }}'
 >
 <TabItem value="register">
 
-Registers the container with Recovery Services vault.<br />This is an asynchronous operation. To track the operation status, use location header to call get latest status of<br />the operation.
+Registers the container with Recovery Services vault.<br />This is an asynchronous operation. To track the operation status, use location header to call get latest status of<br />the operation.
 
 ```sql
 EXEC azure.recovery_services_backup.protection_containers.register 
@@ -240,7 +240,7 @@ EXEC azure.recovery_services_backup.protection_containers.register
 </TabItem>
 <TabItem value="unregister">
 
-Unregisters the given container from your Recovery Services Vault. This is an asynchronous operation. To determine<br />whether the backend service has finished processing the request, call Get Container Operation Result API.
+Unregisters the given container from your Recovery Services Vault. This is an asynchronous operation. To determine<br />whether the backend service has finished processing the request, call Get Container Operation Result API.
 
 ```sql
 EXEC azure.recovery_services_backup.protection_containers.unregister 
@@ -271,7 +271,7 @@ EXEC azure.recovery_services_backup.protection_containers.inquire
 </TabItem>
 <TabItem value="refresh">
 
-Discovers all the containers in the subscription that can be backed up to Recovery Services Vault. This is an<br />asynchronous operation. To know the status of the operation, call GetRefreshOperationResult API.
+Discovers all the containers in the subscription that can be backed up to Recovery Services Vault. This is an<br />asynchronous operation. To know the status of the operation, call GetRefreshOperationResult API.
 
 ```sql
 EXEC azure.recovery_services_backup.protection_containers.refresh 

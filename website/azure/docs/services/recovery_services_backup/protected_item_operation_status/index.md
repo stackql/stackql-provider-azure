@@ -108,7 +108,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a>, <a href="#parameter-protectedItemName"><code>protectedItemName</code></a>, <a href="#parameter-operationId"><code>operationId</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Fetches the status of an operation such as triggering a backup, restore. The status can be in progress, completed<br />or failed. You can refer to the OperationStatus enum for all the possible states of the operation. Some operations<br />create jobs. This method returns the list of jobs associated with the operation.</td>
+    <td>Fetches the status of an operation such as triggering a backup, restore. The status can be in progress, completed<br />or failed. You can refer to the OperationStatus enum for all the possible states of the operation. Some operations<br />create jobs. This method returns the list of jobs associated with the operation.</td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +179,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="get">
 
-Fetches the status of an operation such as triggering a backup, restore. The status can be in progress, completed<br />or failed. You can refer to the OperationStatus enum for all the possible states of the operation. Some operations<br />create jobs. This method returns the list of jobs associated with the operation.
+Fetches the status of an operation such as triggering a backup, restore. The status can be in progress, completed<br />or failed. You can refer to the OperationStatus enum for all the possible states of the operation. Some operations<br />create jobs. This method returns the list of jobs associated with the operation.
 
 ```sql
 SELECT

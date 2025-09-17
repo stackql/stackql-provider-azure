@@ -93,7 +93,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a>, <a href="#parameter-$filter"><code>$filter</code></a>, <a href="#parameter-$skipToken"><code>$skipToken</code></a></td>
-    <td>Provides a pageable list of protectable objects within your subscription according to the query filter and the<br />pagination parameters.</td>
+    <td>Provides a pageable list of protectable objects within your subscription according to the query filter and the<br />pagination parameters.</td>
 </tr>
 </tbody>
 </table>
@@ -154,7 +154,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="list">
 
-Provides a pageable list of protectable objects within your subscription according to the query filter and the<br />pagination parameters.
+Provides a pageable list of protectable objects within your subscription according to the query filter and the<br />pagination parameters.
 
 ```sql
 SELECT

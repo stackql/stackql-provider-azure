@@ -54,7 +54,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-siteName"><code>siteName</code></a></td>
     <td></td>
-    <td>Method to enable disable dependency map status for machines<br />            in a site.</td>
+    <td>Method to enable disable dependency map status for machines<br />            in a site.</td>
 </tr>
 </tbody>
 </table>
@@ -100,7 +100,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="update">
 
-Method to enable disable dependency map status for machines<br />            in a site.
+Method to enable disable dependency map status for machines<br />            in a site.
 
 ```sql
 EXEC azure.migrate.hyperv_dependency_map_controller_dependency_map_status.update 

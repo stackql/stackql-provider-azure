@@ -144,7 +144,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 <tr id="parameter-$filter">
     <td><CopyableCode code="$filter" /></td>
     <td><code>string</code></td>
-    <td>| Field | Supported operators   |---------------------|------------------------   location eq &#123;location&#125; and resource eq &#123;resourceName&#125;  Example: $filter=location eq eastus and resourceName eq cores</td>
+    <td>| Field | Supported operators  <br /> |---------------------|------------------------ <br />  location eq &#123;location&#125; and resource eq &#123;resourceName&#125;  Example: $filter=location eq eastus and resourceName eq cores</td>
 </tr>
 <tr id="parameter-groupQuotaName">
     <td><CopyableCode code="groupQuotaName" /></td>

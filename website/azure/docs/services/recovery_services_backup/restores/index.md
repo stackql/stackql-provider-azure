@@ -54,7 +54,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a>, <a href="#parameter-protectedItemName"><code>protectedItemName</code></a>, <a href="#parameter-recoveryPointId"><code>recoveryPointId</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a>, <a href="#parameter-x-ms-authorization-auxiliary"><code>x-ms-authorization-auxiliary</code></a></td>
-    <td>Restores the specified backed up data. This is an asynchronous operation. To know the status of this API call, use<br />GetProtectedItemOperationResult API.</td>
+    <td>Restores the specified backed up data. This is an asynchronous operation. To know the status of this API call, use<br />GetProtectedItemOperationResult API.</td>
 </tr>
 </tbody>
 </table>
@@ -130,7 +130,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="trigger">
 
-Restores the specified backed up data. This is an asynchronous operation. To know the status of this API call, use<br />GetProtectedItemOperationResult API.
+Restores the specified backed up data. This is an asynchronous operation. To know the status of this API call, use<br />GetProtectedItemOperationResult API.
 
 ```sql
 EXEC azure.recovery_services_backup.restores.trigger 

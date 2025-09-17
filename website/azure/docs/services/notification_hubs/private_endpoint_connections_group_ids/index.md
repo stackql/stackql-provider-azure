@@ -98,14 +98,14 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-namespaceName"><code>namespaceName</code></a>, <a href="#parameter-subResourceName"><code>subResourceName</code></a></td>
     <td></td>
-    <td>Even though this namespace requires subscription id, resource group and namespace name, it returns a constant payload (for a given namespacE) every time it's called.<br />That's why we don't send it to the sibling RP, but process it directly in the scale unit that received the request.</td>
+    <td>Even though this namespace requires subscription id, resource group and namespace name, it returns a constant payload (for a given namespacE) every time it's called.<br />That's why we don't send it to the sibling RP, but process it directly in the scale unit that received the request.</td>
 </tr>
 <tr>
     <td><a href="#list"><CopyableCode code="list" /></a></td>
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-namespaceName"><code>namespaceName</code></a></td>
     <td></td>
-    <td>Even though this namespace requires subscription id, resource group and namespace name, it returns a constant payload (for a given namespacE) every time it's called.<br />That's why we don't send it to the sibling RP, but process it directly in the scale unit that received the request.</td>
+    <td>Even though this namespace requires subscription id, resource group and namespace name, it returns a constant payload (for a given namespacE) every time it's called.<br />That's why we don't send it to the sibling RP, but process it directly in the scale unit that received the request.</td>
 </tr>
 </tbody>
 </table>
@@ -157,7 +157,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="get">
 
-Even though this namespace requires subscription id, resource group and namespace name, it returns a constant payload (for a given namespacE) every time it's called.<br />That's why we don't send it to the sibling RP, but process it directly in the scale unit that received the request.
+Even though this namespace requires subscription id, resource group and namespace name, it returns a constant payload (for a given namespacE) every time it's called.<br />That's why we don't send it to the sibling RP, but process it directly in the scale unit that received the request.
 
 ```sql
 SELECT
@@ -172,7 +172,7 @@ AND subResourceName = '{{ subResourceName }}' -- required
 </TabItem>
 <TabItem value="list">
 
-Even though this namespace requires subscription id, resource group and namespace name, it returns a constant payload (for a given namespacE) every time it's called.<br />That's why we don't send it to the sibling RP, but process it directly in the scale unit that received the request.
+Even though this namespace requires subscription id, resource group and namespace name, it returns a constant payload (for a given namespacE) every time it's called.<br />That's why we don't send it to the sibling RP, but process it directly in the scale unit that received the request.
 
 ```sql
 SELECT

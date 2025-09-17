@@ -93,7 +93,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-intentObjectName"><code>intentObjectName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Provides the details of the protection intent up item. This is an asynchronous operation. To know the status of the operation,<br />call the GetItemOperationResult API.</td>
+    <td>Provides the details of the protection intent up item. This is an asynchronous operation. To know the status of the operation,<br />call the GetItemOperationResult API.</td>
 </tr>
 <tr>
     <td><a href="#create_or_update"><CopyableCode code="create_or_update" /></a></td>
@@ -180,7 +180,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="get">
 
-Provides the details of the protection intent up item. This is an asynchronous operation. To know the status of the operation,<br />call the GetItemOperationResult API.
+Provides the details of the protection intent up item. This is an asynchronous operation. To know the status of the operation,<br />call the GetItemOperationResult API.
 
 ```sql
 SELECT

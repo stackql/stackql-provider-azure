@@ -76,7 +76,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="restrictions" /></td>
     <td><code>array</code></td>
-    <td>Gets the restrictions because of which SKU cannot be used. This is empty if there are no restrictions.</td>
+    <td>Gets the restrictions because of which SKU cannot be used. This is<br /> empty if there are no restrictions.</td>
 </tr>
 <tr>
     <td><CopyableCode code="tier" /></td>

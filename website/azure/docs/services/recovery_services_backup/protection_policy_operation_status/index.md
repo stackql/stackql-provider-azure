@@ -108,7 +108,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-policyName"><code>policyName</code></a>, <a href="#parameter-operationId"><code>operationId</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Provides the status of the asynchronous operations like backup, restore. The status can be in progress, completed<br />or failed. You can refer to the Operation Status enum for all the possible states of an operation. Some operations<br />create jobs. This method returns the list of jobs associated with operation.</td>
+    <td>Provides the status of the asynchronous operations like backup, restore. The status can be in progress, completed<br />or failed. You can refer to the Operation Status enum for all the possible states of an operation. Some operations<br />create jobs. This method returns the list of jobs associated with operation.</td>
 </tr>
 </tbody>
 </table>
@@ -169,7 +169,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="get">
 
-Provides the status of the asynchronous operations like backup, restore. The status can be in progress, completed<br />or failed. You can refer to the Operation Status enum for all the possible states of an operation. Some operations<br />create jobs. This method returns the list of jobs associated with operation.
+Provides the status of the asynchronous operations like backup, restore. The status can be in progress, completed<br />or failed. You can refer to the Operation Status enum for all the possible states of an operation. Some operations<br />create jobs. This method returns the list of jobs associated with operation.
 
 ```sql
 SELECT

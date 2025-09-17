@@ -70,7 +70,7 @@ Data Manager Resource object.
 <tr>
     <td><CopyableCode code="location" /></td>
     <td><code>string</code></td>
-    <td>The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update the request will succeed.</td>
+    <td>The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East<br /> US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo<br /> region is specified on update the request will succeed.</td>
 </tr>
 <tr>
     <td><CopyableCode code="sku" /></td>
@@ -80,7 +80,7 @@ Data Manager Resource object.
 <tr>
     <td><CopyableCode code="tags" /></td>
     <td><code>object</code></td>
-    <td>The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).</td>
+    <td>The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource<br /> (across resource groups).</td>
 </tr>
 <tr>
     <td><CopyableCode code="type" /></td>
@@ -121,7 +121,7 @@ List of data manager resources by resource group.
 <tr>
     <td><CopyableCode code="location" /></td>
     <td><code>string</code></td>
-    <td>The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update the request will succeed.</td>
+    <td>The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East<br /> US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo<br /> region is specified on update the request will succeed.</td>
 </tr>
 <tr>
     <td><CopyableCode code="sku" /></td>
@@ -131,7 +131,7 @@ List of data manager resources by resource group.
 <tr>
     <td><CopyableCode code="tags" /></td>
     <td><code>object</code></td>
-    <td>The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).</td>
+    <td>The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource<br /> (across resource groups).</td>
 </tr>
 <tr>
     <td><CopyableCode code="type" /></td>
@@ -172,7 +172,7 @@ List of data manager resources available under the subscription.
 <tr>
     <td><CopyableCode code="location" /></td>
     <td><code>string</code></td>
-    <td>The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update the request will succeed.</td>
+    <td>The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East<br /> US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo<br /> region is specified on update the request will succeed.</td>
 </tr>
 <tr>
     <td><CopyableCode code="sku" /></td>
@@ -182,7 +182,7 @@ List of data manager resources available under the subscription.
 <tr>
     <td><CopyableCode code="tags" /></td>
     <td><code>object</code></td>
-    <td>The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).</td>
+    <td>The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource<br /> (across resource groups).</td>
 </tr>
 <tr>
     <td><CopyableCode code="type" /></td>
@@ -235,7 +235,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-dataManagerName"><code>dataManagerName</code></a></td>
     <td></td>
-    <td>Creates a new data manager resource with the specified parameters. Existing resources cannot be updated with this API<br />and should instead be updated with the Update data manager resource API.</td>
+    <td>Creates a new data manager resource with the specified parameters. Existing resources cannot be updated with this API<br />and should instead be updated with the Update data manager resource API.</td>
 </tr>
 <tr>
     <td><a href="#update"><CopyableCode code="update" /></a></td>
@@ -371,7 +371,7 @@ WHERE subscriptionId = '{{ subscriptionId }}' -- required
 >
 <TabItem value="create">
 
-Creates a new data manager resource with the specified parameters. Existing resources cannot be updated with this API<br />and should instead be updated with the Update data manager resource API.
+Creates a new data manager resource with the specified parameters. Existing resources cannot be updated with this API<br />and should instead be updated with the Update data manager resource API.
 
 ```sql
 INSERT INTO azure.hybrid_data_manager.data_managers (

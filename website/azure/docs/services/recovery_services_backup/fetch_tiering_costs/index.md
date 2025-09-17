@@ -54,7 +54,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-sourceTierType"><code>sourceTierType</code></a>, <a href="#parameter-targetTierType"><code>targetTierType</code></a>, <a href="#parameter-objectType"><code>objectType</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Provides the details of the tiering related sizes and cost.<br />Status of the operation can be fetched using GetTieringCostOperationStatus API and result using GetTieringCostOperationResult API.</td>
+    <td>Provides the details of the tiering related sizes and cost.<br />Status of the operation can be fetched using GetTieringCostOperationStatus API and result using GetTieringCostOperationResult API.</td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +105,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="post">
 
-Provides the details of the tiering related sizes and cost.<br />Status of the operation can be fetched using GetTieringCostOperationStatus API and result using GetTieringCostOperationResult API.
+Provides the details of the tiering related sizes and cost.<br />Status of the operation can be fetched using GetTieringCostOperationStatus API and result using GetTieringCostOperationResult API.
 
 ```sql
 EXEC azure.recovery_services_backup.fetch_tiering_costs.post 

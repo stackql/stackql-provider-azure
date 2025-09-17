@@ -93,21 +93,21 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-policyName"><code>policyName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Provides the details of the backup policies associated to Recovery Services Vault. This is an asynchronous<br />operation. Status of the operation can be fetched using GetPolicyOperationResult API.</td>
+    <td>Provides the details of the backup policies associated to Recovery Services Vault. This is an asynchronous<br />operation. Status of the operation can be fetched using GetPolicyOperationResult API.</td>
 </tr>
 <tr>
     <td><a href="#create_or_update"><CopyableCode code="create_or_update" /></a></td>
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-policyName"><code>policyName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a>, <a href="#parameter-x-ms-authorization-auxiliary"><code>x-ms-authorization-auxiliary</code></a></td>
-    <td>Creates or modifies a backup policy. This is an asynchronous operation. Status of the operation can be fetched<br />using GetPolicyOperationResult API.</td>
+    <td>Creates or modifies a backup policy. This is an asynchronous operation. Status of the operation can be fetched<br />using GetPolicyOperationResult API.</td>
 </tr>
 <tr>
     <td><a href="#delete"><CopyableCode code="delete" /></a></td>
     <td><CopyableCode code="delete" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-policyName"><code>policyName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Deletes specified backup policy from your Recovery Services Vault. This is an asynchronous operation. Status of the<br />operation can be fetched using GetProtectionPolicyOperationResult API.</td>
+    <td>Deletes specified backup policy from your Recovery Services Vault. This is an asynchronous operation. Status of the<br />operation can be fetched using GetProtectionPolicyOperationResult API.</td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +168,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="get">
 
-Provides the details of the backup policies associated to Recovery Services Vault. This is an asynchronous<br />operation. Status of the operation can be fetched using GetPolicyOperationResult API.
+Provides the details of the backup policies associated to Recovery Services Vault. This is an asynchronous<br />operation. Status of the operation can be fetched using GetPolicyOperationResult API.
 
 ```sql
 SELECT
@@ -199,7 +199,7 @@ AND api-version = '{{ api-version }}'
 >
 <TabItem value="create_or_update">
 
-Creates or modifies a backup policy. This is an asynchronous operation. Status of the operation can be fetched<br />using GetPolicyOperationResult API.
+Creates or modifies a backup policy. This is an asynchronous operation. Status of the operation can be fetched<br />using GetPolicyOperationResult API.
 
 ```sql
 INSERT INTO azure.recovery_services_backup.protection_policies (
@@ -269,7 +269,7 @@ type
 >
 <TabItem value="delete">
 
-Deletes specified backup policy from your Recovery Services Vault. This is an asynchronous operation. Status of the<br />operation can be fetched using GetProtectionPolicyOperationResult API.
+Deletes specified backup policy from your Recovery Services Vault. This is an asynchronous operation. Status of the<br />operation can be fetched using GetProtectionPolicyOperationResult API.
 
 ```sql
 DELETE FROM azure.recovery_services_backup.protection_policies

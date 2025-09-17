@@ -54,7 +54,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-jobName"><code>jobName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Cancels a job. This is an asynchronous operation. To know the status of the cancellation, call<br />GetCancelOperationResult API.</td>
+    <td>Cancels a job. This is an asynchronous operation. To know the status of the cancellation, call<br />GetCancelOperationResult API.</td>
 </tr>
 </tbody>
 </table>
@@ -110,7 +110,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="trigger">
 
-Cancels a job. This is an asynchronous operation. To know the status of the cancellation, call<br />GetCancelOperationResult API.
+Cancels a job. This is an asynchronous operation. To know the status of the cancellation, call<br />GetCancelOperationResult API.
 
 ```sql
 EXEC azure.recovery_services_backup.job_cancellations.trigger 

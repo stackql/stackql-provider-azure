@@ -100,7 +100,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="replace" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-resourceGuardProxyName"><code>resourceGuardProxyName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Add or Update ResourceGuardProxy under vault<br />Secures vault critical operations</td>
+    <td>Add or Update ResourceGuardProxy under vault<br />Secures vault critical operations</td>
 </tr>
 <tr>
     <td><a href="#delete"><CopyableCode code="delete" /></a></td>
@@ -200,7 +200,7 @@ AND api-version = '{{ api-version }}'
 >
 <TabItem value="put">
 
-Add or Update ResourceGuardProxy under vault<br />Secures vault critical operations
+Add or Update ResourceGuardProxy under vault<br />Secures vault critical operations
 
 ```sql
 REPLACE azure.recovery_services_backup.resource_guard_proxies

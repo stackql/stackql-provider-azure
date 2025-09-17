@@ -66,7 +66,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="secondaryConnectionString" /></td>
     <td><code>string</code></td>
-    <td>Gets or sets secondaryConnectionString of the created AuthorizationRule</td>
+    <td>Gets or sets secondaryConnectionString of the created<br /> AuthorizationRule</td>
 </tr>
 <tr>
     <td><CopyableCode code="secondaryKey" /></td>

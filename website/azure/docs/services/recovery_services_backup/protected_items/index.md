@@ -93,21 +93,21 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a>, <a href="#parameter-protectedItemName"><code>protectedItemName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a>, <a href="#parameter-$filter"><code>$filter</code></a></td>
-    <td>Provides the details of the backed up item. This is an asynchronous operation. To know the status of the operation,<br />call the GetItemOperationResult API.</td>
+    <td>Provides the details of the backed up item. This is an asynchronous operation. To know the status of the operation,<br />call the GetItemOperationResult API.</td>
 </tr>
 <tr>
     <td><a href="#create_or_update"><CopyableCode code="create_or_update" /></a></td>
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a>, <a href="#parameter-protectedItemName"><code>protectedItemName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a>, <a href="#parameter-x-ms-authorization-auxiliary"><code>x-ms-authorization-auxiliary</code></a></td>
-    <td>Enables backup of an item or to modifies the backup policy information of an already backed up item. This is an<br />asynchronous operation. To know the status of the operation, call the GetItemOperationResult API.</td>
+    <td>Enables backup of an item or to modifies the backup policy information of an already backed up item. This is an<br />asynchronous operation. To know the status of the operation, call the GetItemOperationResult API.</td>
 </tr>
 <tr>
     <td><a href="#delete"><CopyableCode code="delete" /></a></td>
     <td><CopyableCode code="delete" /></td>
     <td><a href="#parameter-vaultName"><code>vaultName</code></a>, <a href="#parameter-resourceGroupName"><code>resourceGroupName</code></a>, <a href="#parameter-subscriptionId"><code>subscriptionId</code></a>, <a href="#parameter-fabricName"><code>fabricName</code></a>, <a href="#parameter-containerName"><code>containerName</code></a>, <a href="#parameter-protectedItemName"><code>protectedItemName</code></a></td>
     <td><a href="#parameter-api-version"><code>api-version</code></a></td>
-    <td>Used to disable backup of an item within a container. This is an asynchronous operation. To know the status of the<br />request, call the GetItemOperationResult API.</td>
+    <td>Used to disable backup of an item within a container. This is an asynchronous operation. To know the status of the<br />request, call the GetItemOperationResult API.</td>
 </tr>
 </tbody>
 </table>
@@ -183,7 +183,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="get">
 
-Provides the details of the backed up item. This is an asynchronous operation. To know the status of the operation,<br />call the GetItemOperationResult API.
+Provides the details of the backed up item. This is an asynchronous operation. To know the status of the operation,<br />call the GetItemOperationResult API.
 
 ```sql
 SELECT
@@ -217,7 +217,7 @@ AND $filter = '{{ $filter }}'
 >
 <TabItem value="create_or_update">
 
-Enables backup of an item or to modifies the backup policy information of an already backed up item. This is an<br />asynchronous operation. To know the status of the operation, call the GetItemOperationResult API.
+Enables backup of an item or to modifies the backup policy information of an already backed up item. This is an<br />asynchronous operation. To know the status of the operation, call the GetItemOperationResult API.
 
 ```sql
 INSERT INTO azure.recovery_services_backup.protected_items (
@@ -297,7 +297,7 @@ type
 >
 <TabItem value="delete">
 
-Used to disable backup of an item within a container. This is an asynchronous operation. To know the status of the<br />request, call the GetItemOperationResult API.
+Used to disable backup of an item within a container. This is an asynchronous operation. To know the status of the<br />request, call the GetItemOperationResult API.
 
 ```sql
 DELETE FROM azure.recovery_services_backup.protected_items

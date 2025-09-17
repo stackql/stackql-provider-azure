@@ -58,17 +58,17 @@ The list of operations for Microsoft.HybridData provider.
 <tr>
     <td><CopyableCode code="display" /></td>
     <td><code>object</code></td>
-    <td>Gets or sets Display information Contains the localized display information for this particular operation/action</td>
+    <td>Gets or sets Display information<br /> Contains the localized display information for this particular operation/action</td>
 </tr>
 <tr>
     <td><CopyableCode code="origin" /></td>
     <td><code>string</code></td>
-    <td>Gets or sets Origin The intended executor of the operation; governs the display of the operation in the RBAC UX and the audit logs UX. Default value is “user,system”</td>
+    <td>Gets or sets Origin<br /> The intended executor of the operation; governs the display of the operation in the RBAC UX and the audit logs UX.<br /> Default value is “user,system”</td>
 </tr>
 <tr>
     <td><CopyableCode code="properties" /></td>
     <td><code>object</code></td>
-    <td>Gets or sets Properties Reserved for future use</td>
+    <td>Gets or sets Properties<br /> Reserved for future use</td>
 </tr>
 </tbody>
 </table>
