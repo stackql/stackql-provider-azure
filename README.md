@@ -200,8 +200,9 @@ npm run generate-docs -- \
   --output-dir ./website/azure \
   --provider-data-dir ./provider-dev/docgen/azure
 
+# note the azure site has to be built locally
 cd website/azure
-export NODE_OPTIONS="--max-old-space-size=24576" && yarn build
-yarn start
+./local_build.sh
+./deploy_to_netlify.sh
 cd ../..
 ```
